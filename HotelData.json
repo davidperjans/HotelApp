@@ -1,0 +1,97 @@
+[
+  {
+    "RoomNumber": 101,
+    "TypeOfRoom": "Single",
+    "isRoomTaken": true,
+    "PricePerNight": 500,
+    "CurrentGuest": {
+      "FirstName": "David",
+      "LastName": "Perjans",
+      "Name": "David Perjans",
+      "PhoneNumber": 734408964
+    }
+  },
+  {
+    "RoomNumber": 102,
+    "TypeOfRoom": "Double",
+    "isRoomTaken": true,
+    "PricePerNight": 750,
+    "CurrentGuest": {
+      "FirstName": "David",
+      "LastName": "Perjans",
+      "Name": "David Perjans",
+      "PhoneNumber": 734408964
+    }
+  },
+  {
+    "RoomNumber": 103,
+    "TypeOfRoom": "Suite",
+    "isRoomTaken": false,
+    "PricePerNight": 1500,
+    "CurrentGuest": null
+  },
+  {
+    "RoomNumber": 104,
+    "TypeOfRoom": "Single",
+    "isRoomTaken": true,
+    "PricePerNight": 500,
+    "CurrentGuest": {
+      "FirstName": "David",
+      "LastName": "Perjans",
+      "Name": "David Perjans",
+      "PhoneNumber": 734408964
+    }
+  },
+  {
+    "RoomNumber": 105,
+    "TypeOfRoom": "Double",
+    "isRoomTaken": false,
+    "PricePerNight": 750,
+    "CurrentGuest": null
+  },
+  {
+    "RoomNumber": 106,
+    "TypeOfRoom": "Suite",
+    "isRoomTaken": true,
+    "PricePerNight": 1500,
+    "CurrentGuest": {
+      "FirstName": "David",
+      "LastName": "Perjans",
+      "Name": "David Perjans",
+      "PhoneNumber": 734408964
+    }
+  },
+  {
+    "RoomNumber": 107,
+    "TypeOfRoom": "Single",
+    "isRoomTaken": false,
+    "PricePerNight": 500,
+    "CurrentGuest": null
+  },
+  {
+    "RoomNumber": 108,
+    "TypeOfRoom": "Double",
+    "isRoomTaken": false,
+    "PricePerNight": 750,
+    "CurrentGuest": null
+  },
+  {
+    "RoomNumber": 109,
+    "TypeOfRoom": "Suite",
+    "isRoomTaken": false,
+    "PricePerNight": 1500,
+    "CurrentGuest": null
+  },
+  {
+    "RoomNumber": 110,
+    "TypeOfRoom": "Single",
+    "isRoomTaken": true,
+    "PricePerNight": 500,
+    "CurrentGuest": {
+      "FirstName": "David",
+      "LastName": "Perjans",
+      "Name": "David Perjans",
+      "PhoneNumber": 734408964
+    }
+  }
+]
