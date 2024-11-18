@@ -1,97 +1,75 @@
-[
-  {
-    "RoomNumber": 101,
-    "TypeOfRoom": "Single",
-    "isRoomTaken": true,
-    "PricePerNight": 500,
-    "CurrentGuest": {
-      "FirstName": "David",
-      "LastName": "Perjans",
-      "Name": "David Perjans",
-      "PhoneNumber": 734408964
+{
+  "Rooms": [
+    {
+      "RoomNumber": 101,
+      "TypeOfRoom": "Enkelrum",
+      "isRoomTaken": false,
+      "PricePerNight": 500,
+      "CurrentGuest": null
+    },
+    {
+      "RoomNumber": 102,
+      "TypeOfRoom": "Dubbelrum",
+      "isRoomTaken": false,
+      "PricePerNight": 1000,
+      "CurrentGuest": null
+    },
+    {
+      "RoomNumber": 103,
+      "TypeOfRoom": "Enkelrum",
+      "isRoomTaken": false,
+      "PricePerNight": 600,
+      "CurrentGuest": null
+    },
+    {
+      "RoomNumber": 104,
+      "TypeOfRoom": "Svit",
+      "isRoomTaken": false,
+      "PricePerNight": 2500,
+      "CurrentGuest": null
+    },
+    {
+      "RoomNumber": 105,
+      "TypeOfRoom": "Dubbelrum",
+      "isRoomTaken": false,
+      "PricePerNight": 1250,
+      "CurrentGuest": null
+    },
+    {
+      "RoomNumber": 106,
+      "TypeOfRoom": "Enkelrum",
+      "isRoomTaken": false,
+      "PricePerNight": 700,
+      "CurrentGuest": null
+    },
+    {
+      "RoomNumber": 107,
+      "TypeOfRoom": "Enkelrum",
+      "isRoomTaken": false,
+      "PricePerNight": 550,
+      "CurrentGuest": null
+    },
+    {
+      "RoomNumber": 108,
+      "TypeOfRoom": "Enkelrum",
+      "isRoomTaken": false,
+      "PricePerNight": 450,
+      "CurrentGuest": null
+    },
+    {
+      "RoomNumber": 109,
+      "TypeOfRoom": "Dubblerum",
+      "isRoomTaken": false,
+      "PricePerNight": 900,
+      "CurrentGuest": null
+    },
+    {
+      "RoomNumber": 110,
+      "TypeOfRoom": "Svit",
+      "isRoomTaken": false,
+      "PricePerNight": 3000,
+      "CurrentGuest": null
     }
-  },
-  {
-    "RoomNumber": 102,
-    "TypeOfRoom": "Double",
-    "isRoomTaken": true,
-    "PricePerNight": 750,
-    "CurrentGuest": {
-      "FirstName": "David",
-      "LastName": "Perjans",
-      "Name": "David Perjans",
-      "PhoneNumber": 734408964
-    }
-  },
-  {
-    "RoomNumber": 103,
-    "TypeOfRoom": "Suite",
-    "isRoomTaken": false,
-    "PricePerNight": 1500,
-    "CurrentGuest": null
-  },
-  {
-    "RoomNumber": 104,
-    "TypeOfRoom": "Single",
-    "isRoomTaken": true,
-    "PricePerNight": 500,
-    "CurrentGuest": {
-      "FirstName": "David",
-      "LastName": "Perjans",
-      "Name": "David Perjans",
-      "PhoneNumber": 734408964
-    }
-  },
-  {
-    "RoomNumber": 105,
-    "TypeOfRoom": "Double",
-    "isRoomTaken": false,
-    "PricePerNight": 750,
-    "CurrentGuest": null
-  },
-  {
-    "RoomNumber": 106,
-    "TypeOfRoom": "Suite",
-    "isRoomTaken": true,
-    "PricePerNight": 1500,
-    "CurrentGuest": {
-      "FirstName": "David",
-      "LastName": "Perjans",
-      "Name": "David Perjans",
-      "PhoneNumber": 734408964
-    }
-  },
-  {
-    "RoomNumber": 107,
-    "TypeOfRoom": "Single",
-    "isRoomTaken": false,
-    "PricePerNight": 500,
-    "CurrentGuest": null
-  },
-  {
-    "RoomNumber": 108,
-    "TypeOfRoom": "Double",
-    "isRoomTaken": false,
-    "PricePerNight": 750,
-    "CurrentGuest": null
-  },
-  {
-    "RoomNumber": 109,
-    "TypeOfRoom": "Suite",
-    "isRoomTaken": false,
-    "PricePerNight": 1500,
-    "CurrentGuest": null
-  },
-  {
-    "RoomNumber": 110,
-    "TypeOfRoom": "Single",
-    "isRoomTaken": true,
-    "PricePerNight": 500,
-    "CurrentGuest": {
-      "FirstName": "David",
-      "LastName": "Perjans",
-      "Name": "David Perjans",
-      "PhoneNumber": 734408964
-    }
-  }
-]
+  ],
+  "Fakturor": []
+}
