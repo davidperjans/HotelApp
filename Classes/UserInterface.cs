@@ -27,7 +27,7 @@ namespace HotelApp.Classes
                     .PageSize(10)
                     .MoreChoicesText("[grey](Move up and down to reveal more options)[/]")
                     .AddChoices(new[] {
-                        "Checka in gäst", "Checka ut gäst", "Visa rum status",
+                        "Checka in gäst", "Checka ut gäst", "Visa rum status", "Visa fakturor",
                         "Avsluta & Spara",
                     }));
 
@@ -37,13 +37,16 @@ namespace HotelApp.Classes
                         hotel.CheckIn();
                         break;
                     case "Checka ut gäst":
-                        //Logik
+                        hotel.CheckOut();
                         break;
                     case "Visa rum status":
                         hotel.ShowRooms();
                         break;
+                    case "Visa fakturor":
+                        hotel.ShowInvoices();
+                        break;
                     case "Avsluta & Spara":
-                        hotel.SaveRooms();
+                        hotel.SaveAllData();
                         AnsiConsole.MarkupLine("[bold green]Sparar och avslutar program...[/]");
                         return;
                     default:

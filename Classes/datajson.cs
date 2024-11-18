@@ -10,25 +10,26 @@ namespace HotelApp.Classes
     public class datajson
     {
         // Load data from JSON file
-        public static List<Room> LoadRooms(string filePath)
+        public static HotelData LoadData(string filePath)
         {
             if (File.Exists(filePath))
             {
                 string jsonData = File.ReadAllText(filePath);
-                return JsonSerializer.Deserialize<List<Room>>(jsonData);
+                return JsonSerializer.Deserialize<HotelData>(jsonData) ?? new HotelData();
             }
             else
             {
-                Console.WriteLine("File not found. Returning an empty list.");
-                return new List<Room>();
+                Console.WriteLine("File not found. Returning default HotelData.");
+                return new HotelData();
             }
         }
 
         // Save data to JSON file
-        public static void SaveRooms(string filePath, List<Room> rooms)
+        public static void SaveData(string filePath, HotelData data)
         {
-            string jsonData = JsonSerializer.Serialize(rooms, new JsonSerializerOptions { WriteIndented = true });
+            string jsonData = JsonSerializer.Serialize(data, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(filePath, jsonData);
         }
     }
+
 }
