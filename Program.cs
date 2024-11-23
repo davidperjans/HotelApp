@@ -9,7 +9,7 @@ namespace HotelApp
             Hotel hotel = new Hotel();
             UserInterface ui = new UserInterface(hotel);
 
-            ui.RunApplication();
+            ui.RunAppAsGuestOrAdmin();
         }
     }
 }
