@@ -58,7 +58,7 @@
     },
     {
       "RoomNumber": 109,
-      "TypeOfRoom": "Dubblerum",
+      "TypeOfRoom": "Dubbelrum",
       "isRoomTaken": false,
       "PricePerNight": 900,
       "CurrentGuest": null

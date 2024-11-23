@@ -15,6 +15,8 @@ namespace HotelApp.Classes
         private HotelData hotelData;
         private string filePath = "HotelData.json";
 
+        public string TypeOfRoomString { get; set; }
+
         public Hotel()
         {
             hotelData = datajson.LoadData(filePath);
@@ -144,8 +146,94 @@ namespace HotelApp.Classes
                 });
 
         }
+
+        public void RemoveInvoice()
+        {
+            if (Invoices.Count == 0)
+            {
+                AnsiConsole.MarkupLine("[bold red]Det finns inga fakturor[/]");
+            }
+            else
+            {
+                var invoiceToRemove = AnsiConsole.Prompt(
+                            new TextPrompt<int>("Ange ID på fakturan du vill ta bort"));
+
+                var doesInvoiceExist = Invoices.FirstOrDefault(invoice => invoice.FakturaId == invoiceToRemove);
+
+                if (doesInvoiceExist != null)
+                {
+                    Invoices.Remove(doesInvoiceExist);
+                    AnsiConsole.MarkupLine("[bold yellow]Fakturan är nu borttagen![/]");
+                }
+                else
+                {
+                    AnsiConsole.MarkupLine($"[bold red]Det finns inga faktura med ID {invoiceToRemove}[/]");
+                }
+            }
+        }
+
+        public void RemoveRoom()
+        {
+            var roomNumber = AnsiConsole.Prompt(
+                            new TextPrompt<int>("Vad är det för rumsnummer du vill ta bort?"));
+
+            var doesRoomExist = Rooms.FirstOrDefault(room => room.RoomNumber == roomNumber);
+
+            if (doesRoomExist != null)
+            {
+                if(doesRoomExist.CurrentGuest == null)
+                {
+                    Rooms.Remove(doesRoomExist);
+                    AnsiConsole.MarkupLine("[bold yellow]Rummet är nu borttaget![/]");
+                }
+                else
+                {
+                    AnsiConsole.MarkupLine("[bold red]Rummet är nu upptaget, checka ut gäst först![/]");
+                }
+                
+            }
+        }
+
+        public void AddRoom()
+        {
+            var roomNumber = AnsiConsole.Prompt(
+                            new TextPrompt<int>("Vad är det för rumsnummer?"));
+
+
+            var typeOfRoomPrompt = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                    .Title("Välj vilken typ rummet är")
+                    .PageSize(10)
+                    .MoreChoicesText("[grey](Move up and down to reveal more options)[/]")
+                    .AddChoices(new[] {
+                        "Enkelrum", "Dubbelrum", "Svit",
+                    }));
+
+            switch (typeOfRoomPrompt)
+            {
+                case "Enkelrum":
+                    TypeOfRoomString = "Enkelrum";
+                    break;
+                case "Dubbelrum":
+                    TypeOfRoomString = "Dubbelrum";
+                    break;
+                case "Svit":
+                    TypeOfRoomString = "Svit";
+                    break;
+
+            }
+
+            var pricePerNight = AnsiConsole.Prompt(
+                            new TextPrompt<int>("Vad är kostnaden per natt?"));
+
+            Room newRoom = new Room(roomNumber, TypeOfRoomString, pricePerNight);
+            Rooms.Add(newRoom);
+            AnsiConsole.MarkupLine("[bold green]Rummet har lagts till[/]");
+        }
         public void ShowRooms()
         {
+            var sortedRooms = Rooms.OrderBy(room => room.RoomNumber).ToList();
+
             var table = new Table()
                 .BorderColor(Color.Silver)
                 .Border(TableBorder.Rounded);
@@ -159,7 +247,7 @@ namespace HotelApp.Classes
                     table.AddColumn(new TableColumn("Ledigt"));
                     table.AddColumn(new TableColumn("Gäst"));
 
-                    foreach (var room in Rooms)
+                    foreach (var room in sortedRooms)
                     {
                         var isRoomTakenColor = room.isRoomTaken == false ? Color.Green : Color.Red;
 
